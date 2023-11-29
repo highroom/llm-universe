@@ -1,0 +1,80 @@
+2
+Journal efFrontiers cfConputer Science and Technology计算机科学与探索
+2020, 14(1)
+firstly this paper introduces the research status of GAN; then introduces the theory and framework of GAN, and
+analyzes the reasons why GAN has gradient disappearance and mode collapse during training; then discusses some
+typical models of GAN. This paper summarizes the improvement, advantages, limitations, application scenarios and
+implementation costs of the theory. At the same time, this paper compares GAN with VAE (variational autoencoder)
+and RBM (restricted Boltzmann machine) models, and summarizes the advantages and disadvantages of GAN.
+Finally, the application results of GAN in data generation, image super-resolution, image style conversion, etc. are
+presented, and the challenges and future research directions of GAN are discussed.
+Key words: machine learning; unsupervised learning; generative advers arial networks (GAN); gradients disappearing;
+collapse mode
+1
+引言
+智能等领域的重要性。
+近年来，随着计算能力的提高，数据量的积累以
+80
+及对动物神经网络的研究及成果！，使得人工智能领
+70
+域发展迅速，无其在机器学寸方面最为突出。依据
+60
+数据集是否有标记，机器学习任务被分为有蓝督学
+数50
+习无监督学习和半监督学习。目前机器学习方法，特
+别是深度学习方法在有监督学习任务中取得令人振奋
+20
+的成绩，如图像识别[2-3]、语音合成[4-5],机器翻译[6-1等。
+10
+0
+有监督学习依赖带标记的数据，然而大量带标
+记数据的获取代价昂贵，在数据生成、策略学习等学
+习任务中，这些标记数据的获取甚至不可行。无监
+发表时间(年-月)
+督学习更符合智能的思想，研究者们普遍认为，无监
+Fig.1 Trend of the number of GAN
+督学习将会是人工智能未来重要的发展方向之一。
+papers published on arXiy
+生成模型是无监督学习任务中的关键技术，早
+图1arXiv上GAN论文数量的变化趋势
+期的生成模型有深度信念网络（deepbeliefnetwork，
+DBN)[8],深度玻尔兹曼机(deep Boltzmann machines,
+cs.CV
+DBM)等网络结构，它们将受限玻尔兹曼机
+cs.LG
+stat.ML
+(restricted Boltzmann machine, RBM) [、自编码器
+Cs.CL
+(autoencoder,AE)[]等生成模型融合其中,形成了效
+cs.AI
+Cs.SD
+一
+果不错的生成式模型，但泛化能力却不强。
+eess.AS
+生成对抗网络（generativeadversarialnetworks，
+Cs.CR
+cs.RO
+GAN)是Goodfellow等人[12在2014年提出的一种新
+cs.MM
+的生成式模型。GAN独特的对抗性思想使得它在众
+0
+50
+100
+150
+200250300350
+多生成器模型中脱颖而出，被广泛应用于计算机视
+论文数
+觉（CV).机器学习（ML）、语音处理（AS)等领域。在
+Fig.2Top 10 subject categories of GAN
+arXiv 上以 generative adversarial networks. generative
+papers published on arXiv
+adversarial nets和adversarial learning为关键词的论
+图2arXiv上GAN论文所属的TOP10学科领域
+文发文量总体呈逐年上升趋势（如图1），并且GAN
+原始生成对抗网络
+被应用的学科领域很广，如图2显示的是arXiv上
+GAN论文所属学科领域。这些数据说明了对GAN
+GAN网络结构
+这一模型研究的火热程度，也说明了该方法在人工
+GAN的网络结构由生成网络和判别网络组成，
+(C)1994-2022 China Academic Journal Electronic Publishing House. All rights reserved.http:/www.cnki.net

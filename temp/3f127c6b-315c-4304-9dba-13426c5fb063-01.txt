@@ -1,0 +1,36 @@
+计算机科学与探索
+1673-9418/2020/14(1)-0001-17
+Journal of Frontiers of Computer Science and Technology
+doi: 10.3778/j.issn.1673-9418.1910026
+生成对抗网络GAN综述
+梁俊杰,韦舰晶1+,蒋正锋2
+1.湖北大学计算机与信息工程学院，武汉430062
+2.广西民族师范学院数学与计算机科学学院,广西 崇左 532200
++通信作者 E-mail:wjj_huda2017@sina.com
+摘要：生成对抗网终(GAN)作为-一种新的无监肾学习算法框架得到越来越多研究者的青咪，己然成为当下
+的-一个研究热点。GAN受启发于博奔论中的二人零和博奔理论,其独特的对抗训练思想能生成高质量的样
+本，具有比传统机器学寸算法更加强大的特征学寸和特征表达能力。自前GAN在计算机视觉领域光其是在样
+本生成领取得显著成功,每年有大量GAN相关研究的论文产出。针对GAN这-一热点模型，首先介绍了
+GAN的研究现状接着介绍了GAN的理论框架，详细分析了GAN在训练过程中存在梯度消失和模式崩溃的
+原因；然启讨论了一一些典型的GAN的改进模型，总结了它们理论的改进之处、优点,局限性、应用场景以及实现
+成本，同时还将GAN与VAE,RBM模型进行比较，总结出GAN的优势和劣势；最后展示了GAN在数据生成，
+图像超分辨率,图像风格转换等方面的应用成桌，并探讨了GAN目前面临的挑战以及未来的研究方。
+关键词：机器学习；无监肾学习；生成对抗网络（GAN);梯度消失；模式崩渍
+文献标志码：A中图分类号：TP391.41
+梁俊杰，韦舰晶，蒋正锋.生成对抗网络GAN综述[].计算机科学与探索,2020,14(1):1-17.
+LIANG J J, WEI J J, JIANG Z F. Generative adversarial networks GAN overview[J]. Journal of Frontiers of Com-
+puter Science and Technology, 2020, 14(1): 1-17.
+Generative Adversarial Networks GAN Overview
+LIANG Junjie', WEI Jianjing', JIANG Zhengfeng
+1. School of Computer Science and Information Engineering, Hubei University, Wuhan 430062, China
+2. School of Mathematics and Computer Science, Guangxi Normal University for Nationalities, Chongzuo, Guangxi
+532200, China
+Abstract: As a new unsupervised learning algorithm framework, generative adversarial networks (GAN) has been
+favored by more and more researchers, and it has become a research hotspot. GAN is inspired by the two-person
+has more powerful feature learning and feature expression ability than traditional machine learning algorithms. At
+present, GAN has achieved remarkable success in the field of computer vision, especially in the field of sample
+generation. Each year, there are a large number of GAN-related research papers. For the hotspot model of GAN,
+* The National Natural Science Foundation of China under Grant No. 61300125 (国家自然科学基金)
+Received 2019-09-30,Accepted 2019-11-20.
+CNKI 网络出版: 2019-11-28, http://knis.cnki.net/KCMS/detail/11.5602.TP.20191128.1738.002.html
+(C)1994-2022 China Academic Journal Electronic Publishing House.All rights reserved.http://www.cnki.net
