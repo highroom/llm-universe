@@ -23,17 +23,17 @@
   5. **修正问题**：修正了使用星火大模型 v2、v3 时，在知识库问答时 domain 和 url 错误的问题。
 
   ## 截图示例
-
-- ![](.\figures\使用截图.png)
-
+<div align=center>
+<img src="figures/使用截图.png">
+</div>
 ## 项目架构
 
 ### 整体架构
 
 本项目是一个基于大模型的个人知识库助手，使用了LangChain框架，核心技术包括LLM API调用、向量数据库、检索问答链等。项目整体架构如下：
-
-![整体架构](.\figures\structure.jpg)
-
+<div align=center>
+<img src="figures/structure.jpg">
+</div>
 项目代码结构在`project`目录下，包括`llm`、`embedding`、`data`、`database`、`chain`和`serve`等子目录。
 
 ### 代码结构
